@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p>toString() returns a random number as an almost-unique string:</p>
+
+<p id="demo"></p>
+
+<script>
+let num = Math.random();
+let text = num.toString(16).slice(2);
+// (16) returns 0-9, a-f characters (36) returns 0-9, a-z
+// This isn't guaranteed to be unique so better check it is after generating to make sure it is not a duplicate.
+
+document.getElementById("demo").innerHTML = text;
+</script>
+
+</body>
+</html>
